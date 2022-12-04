@@ -62,9 +62,9 @@ endif()
 
 target_link_libraries(LittleMarketHelper PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-# Link test
-target_link_libraries(LittleMarketHelper PRIVATE $ENV{OR_TOOLS}/TestLib.lib)
-target_include_directories(LittleMarketHelper PRIVATE $ENV{OR_TOOLS}/)
+# OR Tools
+target_link_libraries(LittleMarketHelper PRIVATE D:/Coding/OrTools/lib/ortools.lib)
+target_include_directories(LittleMarketHelper PRIVATE  D:/Coding/OrTools/)
 
 set_target_properties(LittleMarketHelper PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
