@@ -14,6 +14,7 @@
 // TODO: Add "include" column to portfolio table
 // TODO: Turn off HistoryBtn until Implemented
 // TODO: create class to turn off a signal RAII style
+// TODO: Set full screen
 
 int main(int argc, char *argv[])
 {

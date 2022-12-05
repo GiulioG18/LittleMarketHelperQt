@@ -1,4 +1,6 @@
 #include "mainbutton.h"
+#include "portfoliocalibrator.h"
+#include "portfolioupdater.h"
 
 
 Calibrate::Calibrate(QWidget* Parent)
@@ -11,6 +13,12 @@ Calibrate::Calibrate(QWidget* Parent)
 void Calibrate::Clicked()
 {
     Q_ASSERT(MainButton::Portfolio_);
+    Q_ASSERT(MainButton::Portfolio_->IsInitialized());
+
+    UPDATE_ON_RETURN(Portfolio_);
+
+    PortfolioCalibrator* Calibrator = new PortfolioCalibrator(*MainButton::Portfolio_);
+    Calibrator->exec();
 }
 
 void Calibrate::Update()

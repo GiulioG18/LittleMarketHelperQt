@@ -30,6 +30,8 @@ set(PROJECT_SOURCES
         portfolioeditor.h portfolioeditor.cpp
         portfolioeditortablewidget.h portfolioeditortablewidget.cpp
         portfoliovaluelabel.h portfoliovaluelabel.cpp
+        calibrationtablewidget.h calibrationtablewidget.cpp
+        portfoliocalibrator.h portfoliocalibrator.cpp
         ${TS_FILES}
 )
 

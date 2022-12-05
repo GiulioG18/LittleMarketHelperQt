@@ -7,15 +7,8 @@
 
 class LittleMarketHelper;
 
-class Product
+struct Product
 {
-    friend class LittleMarketHelper;
-    friend class PortfolioUpdater;
-    friend class PortfolioTableWidget;
-    friend class PortfolioEditorTableWidget;
-
-public:
-
     Product(
             QString& Name,
             QString& Isin,
@@ -24,8 +17,6 @@ public:
             double OpenPosition,
             QVariant Weight,
             bool Include);
-
-protected:
 
     QString Name_;
     QString Isin_;

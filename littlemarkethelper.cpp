@@ -18,13 +18,6 @@ LittleMarketHelper::LittleMarketHelper(Portfolio* const Portfolio, QWidget *Pare
     // This calls every UI element constructor and some resizing function on those elements
     UserInterface->setupUi(this);    
 
-    // Set full screen
-    //QScreen* ThisScreen = QGuiApplication::primaryScreen();
-    //QRect Rect = ThisScreen->availableGeometry();
-    //int Height = Rect.height();
-    //int Width = Rect.width();
-    //resize(Height, Width);
-
     // Initialize Portfolio_ member for every UI element that needs it
     SetPortfolio(
                 UserInterface->PortfolioTbl,

@@ -34,6 +34,9 @@ public: // Getters and Setters
     inline bool IsInitialized() const { return Initialized_; }
     inline void SetInitialized(bool Value) { Initialized_ = Value; }
 
+    inline bool IsCalibrated() const { return Calibrated_; }
+    inline void SetCalibrated(bool Calibrated) { Calibrated_ = Calibrated; }
+
     inline QVector<Product>& Products() { return Products_; }
     inline const QVector<Product>& Products() const { return Products_; }
 
@@ -42,12 +45,14 @@ public:
     bool IsEmpty() const;
     void MakeEmpty(bool Save);
     void Reset();
+    QVector<Product> IncludedProducts();
 
 private:
 
     QVector<Product>    Products_;
     double              Value_;
     bool                Initialized_;
+    bool                Calibrated_;
     bool                Save_;              // Save log to History file
 };
 

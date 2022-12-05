@@ -8,6 +8,7 @@ Portfolio::Portfolio(QObject *Parent)
       QObject{Parent},
       Value_(0.0),
       Initialized_(false),
+      Calibrated_(false),
       Save_(false)
 {
 }
@@ -35,6 +36,21 @@ void Portfolio::Reset()
     Value_ = 0.0;
     Initialized_ = false;
     Save_ = false;
+}
+
+QVector<Product> Portfolio::IncludedProducts()
+{
+    QVector<Product> IncludedProducts;
+
+    for (const auto& Product : Products_)
+    {
+        if (Product.Include_)
+        {
+            IncludedProducts.emplaceBack(Product);
+        }
+    }
+
+    return IncludedProducts;
 }
 
 
